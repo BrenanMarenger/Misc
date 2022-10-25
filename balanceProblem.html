@@ -1,0 +1,50 @@
+<html>
+<head>
+<script>
+function math(){
+p1 = document.getElementById("person1").value;
+p2 = document.getElementById("person2").value;
+d1 = document.getElementById("p1Dist").value;
+d2 = document.getElementById("p2Dist").value;
+
+p1Force = p1 * d1 * 1;
+p2Force = p2 * d2 * 1;
+
+if(p1 < 0 || p2 < 0 || d1 < 0 || d2 <0){
+	alert("cannot use negative numbers");
+} else{
+
+	if(p1Force > p2Force){
+	alert("person1 goes down");
+	document.getElementById("pic").src="person1.jpg";
+	}
+
+	if(p2Force > p1Force){
+	alert("person2 goes down");
+	document.getElementById("pic").src="person2.jpg";
+	}
+
+	if(p1Force == p2Force){
+	alert("person1 and person2 are balanced");
+	document.getElementById("pic").src="balance.jpg";
+	}
+}
+}
+
+</script>
+</head>
+<body>
+	<form>
+	<img id=pic src=balance.jpg width=300> <br>
+	Enter Weight of Person1:
+	<input id="person1"> <br>
+	Enter Distance from center of Person1:
+	<input id="p1Dist"> <br>
+	Enter Weight of Person2:
+	<input id="person2"> <br>
+	Enter Distance from center of Person2:
+	<input id="p2Dist"> <br>
+	<input type="button" onclick="math()" value="calculate">
+	</form>
+</body>
+</html>

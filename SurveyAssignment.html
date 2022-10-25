@@ -1,0 +1,100 @@
+<html>
+<head>
+	<h1>
+	<center>
+	Academic Survey
+	</center>
+	</h1>
+
+	<style>
+		h1 {
+			background-color: #ffcc66;
+			color: purple;
+			margin: 0px 200px 0px 200px;
+			padding: 10px 10px;
+			border: solid white;
+		}
+		body {
+			background-color: lightgreen;
+			z-index: -1;
+		}
+		div {
+			text-align: left;
+			margin: 50px 60px 40px 30px;
+			width: 27%;
+		}
+		fieldset {
+			background-color: #ff9999;
+			border: 5px groove;
+			margin-right: 800px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<b> Instructions: </b> Carefully read through each question and select all the options that apply to you as accurately as possible.
+	</div>
+	<form action="http://euclid.nmu.edu/~rappleto/printform.php">
+	<fieldset>
+		<b> Todays Date: </b> <br>
+		<input type="date"> <br> <br>
+		<b> How old are you? </b> <br>
+		<select name="age" id="age" value="age">
+			<optgroup label="Younger">
+			<option value="17 or under"> 17 or less </option>
+			<option value="18 to 20"> 18 to 20 </option>
+			</optgroup>
+			<optgroup label="Older">
+			<option value="21 to 23"> 21 to 23 </option>
+			<option value="24 to 26"> 24 to 26 </option>
+			<option value="27 or highter"> 27 or higher <option>
+			</optgroup>
+		</select> <br> <br>
+
+		<b> What is your current education level? </b> <br>
+		<input type="radio" name="eduLvl" value="highschool">
+		<label> High School </label> <br>
+		<input type="radio" name="eduLvl" value="freshman">
+		<label> College Freshman </label> <br>
+		<input type="radio" name="eduLvl" value="sophomore" checked>
+		<label> College Sophomore </label> <br>
+		<input type="radio" name="eduLvl" value="junior">
+		<label> College Junior </label> <br>
+		<input type="radio" name="eduLvl" value="senior">
+		<label> College Senior </label> <br>
+		<input type="radio" name="eduLvl" value="aboveSenior">
+		<label> Above College Senior </label> <br> <br>
+
+		<b> What is your current major/study? </b> <br>
+		<input name="major"> <br> <br>
+
+		<b> How many credit hours are you currently taking? </b> <br>
+		0<input type="range" min="0" max="20">20 <br> <br>
+
+		<b>When do you study? </b> <br>
+		<input type="checkbox" value="Weekends">
+		<label> Weekends </label> <br>
+		<input type="checkbox" value="afterClass">
+		<label> After Class </label> <br>
+		<input type="checkbox" value="beforeClass">
+		<label> Before Class </label> <br>
+		<input type="checkbox" value="freetime">
+		<label> In my free time </label> <br>
+		<input type="checkbox" value="never" checked>
+		<label> Never </label> <br> <br>
+
+
+		<label for="pwd"><b> What is your average grade? <b> <br> </label>
+  		<input type="password" id="pwd" name="pwdGrade" pattern="[A-Fa-f]{1}"><br> <br>
+
+		<b> Other notes/comments <b> <br>
+		<textarea id="other" rows="4" cols="50">
+		</textarea> <br>
+		<input type="file"> <br><br>
+
+		<input type="submit" value="Finish">
+		<input type="reset">
+		</form>
+	</fieldset>
+</body>
+</html>
